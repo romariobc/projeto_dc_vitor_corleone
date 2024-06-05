@@ -13,4 +13,10 @@ O desafio era criar uma página em homenagem a algum personagem. Então criei um
 
 ## Estrutura do Projeto
 
-O projeto é composto por um arquivo HTML (`index.html`) e um arquivo CSS (`estilo.css`). Abaixo está uma breve descrição de cada seção da página:
+O projeto é composto por um arquivo HTML (`index.html`) e um arquivo CSS (`estilo.css`). 
+
+Próximo desafio é transformar o checkbox em um emoje de coração para indicar curtida e contabilizar os likes.
+
+## babysteps
+
+vai dar certo
