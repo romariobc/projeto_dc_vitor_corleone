@@ -4,94 +4,314 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Vitor Corleone</title>
+    <title>Michael Corleone – Wikipédia</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <h1 class="intro">Michael Corleone</h1>
-        <nav>
-            <ul id="navegacao">
-                <li><a href="#biografia">Biografia</a></li>
-                <li><a href="#curiosidades">Curiosidades</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="intro-section">
-            <img class="imgintro" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Michaelcoreleone.jpg/220px-Michaelcoreleone.jpg" alt="Michael Corleone">
-            <p id="bio">
-                Michael Corleone é o filho mais novo de 
-                Vito Corleone, um imigrante siciliano que constrói um império da Máfia. 
-                Após a morte de seu pai, Michael o sucede como o chefe da família do crime Corleone.
-            </p>
-        </section>
-        <hr>
-        <section id="biografia">
-            <h2 class="bio">Biografia</h2>
-            <p>Nascido em 23 de março de 1920, filho da máfia dom Vito Corleone e 
-            sua esposa Carmela, Michael tem dois irmãos mais velhos, Santino "Sonny" 
-            Corleone e Frederico "Fredo" Corleone e uma irmã mais nova, 
-            Constanzia "Connie" Corleone. O consigliere da família, 
-            Tom Hagen, é seu irmão adotivo informal.</p> 
-        
-            <p>Cansado da vida sangrenta e solitária de um Don, Michael se aposenta, 
-            tornando Vincent seu sucessor, mas não antes de dar-lhe permissão para retaliar. 
-            Em troca, Vincent concorda em terminar seu romance com sua filha Mary Corleone. 
-            Certa noite, ao deixar a ópera onde seu filho Antony Corleone se apresentara um assassino
-            se aproxima e atira em Michael, ferindo-o, enquanto uma segunda bala atinge Mary, 
-            matando-a. A morte de Mary quebra o espírito de Michael, e ele grita de agonia sobre o corpo dela. 
-            Após o ocorrido Michael se isola do mundo, quando aos 77 anos e morando sozinho na villa de 
-            Don Tommasino, ele de repente cai de sua cadeira ao chão.</p>
-        </section>
-        <hr>
-        <section id="curiosidades">
-            <h2 class="trivia">Curiosidades</h2>
-            <ul>
-                <li>Michael tentou afastar a família do crime;</li>
-                <li>Sofreu pelo menos 3 tentativas de assassinato e sobreviveu;</li>
-                <li>Lutou na guerra e era considerado um herói até assumir os negócios da família.</li>
-           </ul>  
-           <hr>
-           <h2 class="trilhasonora">Trilha Sonora</h2>
-           <table>
-                <tr>
-                    <th>Artista</th>
-                    <th>Música</th>
-                    <th>Curtiu?</th>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-            </table>
-        </section>
-        <hr>
-        <section id="galeria">
-            <h2 class="galeria">Galeria</h2>
-            <div class="gallery">
-                <img src="https://blogcamposelisios.files.wordpress.com/2014/11/69f21-michael4.jpeg" alt="Michael Corleone na poltrona">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYG--LYhWThACiz2roqbWdKPCT637z6qojw&usqp=CAU" alt="Michael Corleone na capela">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILPk0OOy-VTZW-CxjtF0dlUTJXpT_5aoLB5ic8dSbvDx09-NioSY2i50VbyKYR8mDcuM&usqp=CAU" alt="Michael Corleone">
+    <!-- Cabeçalho principal -->
+    <header id="mw-head" role="banner">
+        <div class="mw-header-container">
+            <h1 id="firstHeading" class="firstHeading">Michael Corleone</h1>
+            <div class="mw-indicators">
+                <div class="mw-indicator" id="coordinates">
+                    <span class="geo">Personagem fictício</span>
+                </div>
             </div>
-        </section>     
+        </div>
+    </header>
+
+    <!-- Navegação -->
+    <nav id="mw-navigation" role="navigation" aria-label="Navegação do site">
+        <div id="mw-panel">
+            <div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+                <h3 id="p-navigation-label">Navegação</h3>
+                <div class="body">
+                    <ul>
+                        <li><a href="#biografia" accesskey="b">Biografia</a></li>
+                        <li><a href="#curiosidades" accesskey="c">Curiosidades</a></li>
+                        <li><a href="#trilha-sonora" accesskey="t">Trilha Sonora</a></li>
+                        <li><a href="#galeria" accesskey="g">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main id="content" class="mw-body" role="main">
+        <div id="bodyContent" class="mw-body-content">
+            
+            <!-- Infobox -->
+            <aside class="infobox" role="complementary">
+                <div class="infobox-above">Michael Corleone</div>
+                <div class="infobox-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Michaelcoreleone.jpg/220px-Michaelcoreleone.jpg" 
+                         alt="Michael Corleone" 
+                         width="220" 
+                         height="auto">
+                    <div class="infobox-caption">Michael Corleone interpretado por Al Pacino</div>
+                </div>
+                <table class="infobox-table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Primeira aparição</th>
+                            <td>O Poderoso Chefão (1972)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Criado por</th>
+                            <td>Mario Puzo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Interpretado por</th>
+                            <td>Al Pacino</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nascimento</th>
+                            <td>23 de março de 1920</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Família</th>
+                            <td>Família Corleone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+
+            <!-- Introdução -->
+            <div class="mw-parser-output">
+                <p class="mw-empty-elt"></p>
+                <p><strong>Michael Corleone</strong> é um personagem fictício e protagonista da saga <em>O Poderoso Chefão</em>, criado pelo escritor <a href="#" title="Mario Puzo">Mario Puzo</a>. Michael é o filho mais novo de <a href="#" title="Vito Corleone">Vito Corleone</a>, um imigrante siciliano que constrói um império da Máfia. Após a morte de seu pai, Michael o sucede como o chefe da <a href="#" title="Família do crime">família do crime</a> Corleone.</p>
+            </div>
+
+            <!-- Índice -->
+            <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+                <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+                <div class="toctitle">
+                    <h2 id="mw-toc-heading">Índice</h2>
+                    <label class="toctogglelabel" for="toctogglecheckbox"></label>
+                </div>
+                <ul>
+                    <li class="toclevel-1 tocsection-1">
+                        <a href="#biografia"><span class="tocnumber">1</span> <span class="toctext">Biografia</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-2">
+                        <a href="#curiosidades"><span class="tocnumber">2</span> <span class="toctext">Curiosidades</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-3">
+                        <a href="#trilha-sonora"><span class="tocnumber">3</span> <span class="toctext">Trilha Sonora</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-4">
+                        <a href="#galeria"><span class="tocnumber">4</span> <span class="toctext">Galeria</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Seção Biografia -->
+            <section id="biografia">
+                <h2><span class="mw-headline" id="Biografia">Biografia</span></h2>
+                <div class="mw-parser-output">
+                    <p>Nascido em <time datetime="1920-03-23">23 de março de 1920</time>, filho da máfia dom <a href="#" title="Vito Corleone">Vito Corleone</a> e sua esposa Carmela, Michael tem dois irmãos mais velhos, Santino "Sonny" Corleone e Frederico "Fredo" Corleone e uma irmã mais nova, Constanzia "Connie" Corleone. O <em>consigliere</em> da família, <a href="#" title="Tom Hagen">Tom Hagen</a>, é seu irmão adotivo informal.</p>
+                    
+                    <p>Cansado da vida sangrenta e solitária de um <em>Don</em>, Michael se aposenta, tornando Vincent seu sucessor, mas não antes de dar-lhe permissão para retaliar. Em troca, Vincent concorda em terminar seu romance com sua filha Mary Corleone. Certa noite, ao deixar a ópera onde seu filho Antony Corleone se apresentara, um assassino se aproxima e atira em Michael, ferindo-o, enquanto uma segunda bala atinge Mary, matando-a. A morte de Mary quebra o espírito de Michael, e ele grita de agonia sobre o corpo dela. Após o ocorrido Michael se isola do mundo, quando aos 77 anos e morando sozinho na villa de Don Tommasino, ele de repente cai de sua cadeira ao chão.</p>
+                </div>
+            </section>
+
+            <!-- Seção Curiosidades -->
+            <section id="curiosidades">
+                <h2><span class="mw-headline" id="Curiosidades">Curiosidades</span></h2>
+                <div class="mw-parser-output">
+                    <ul>
+                        <li>Michael tentou afastar a família do crime;</li>
+                        <li>Sofreu pelo menos 3 tentativas de assassinato e sobreviveu;</li>
+                        <li>Lutou na guerra e era considerado um herói até assumir os negócios da família.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Seção Trilha Sonora -->
+            <section id="trilha-sonora">
+                <h2><span class="mw-headline" id="Trilha_Sonora">Trilha Sonora</span></h2>
+                <div class="mw-parser-output">
+                    <p>A trilha sonora dos filmes de <em>O Poderoso Chefão</em> foi composta por <a href="#" title="Nino Rota">Nino Rota</a>, sendo considerada uma das mais icônicas do cinema.</p>
+                    
+                    <table class="wikitable sortable" role="table">
+                        <caption>Principais temas musicais da saga</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Artista</th>
+                                <th scope="col">Música</th>
+                                <th scope="col">Avaliação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nino Rota</td>
+                                <td><em>The Godfather Theme</em></td>
+                                <td class="star-rating" data-song="theme">
+                                    <span class="star" data-rating="1" aria-label="1 estrela">⭐</span>
+                                    <span class="star" data-rating="2" aria-label="2 estrelas">⭐</span>
+                                    <span class="star" data-rating="3" aria-label="3 estrelas">⭐</span>
+                                    <span class="star" data-rating="4" aria-label="4 estrelas">⭐</span>
+                                    <span class="star" data-rating="5" aria-label="5 estrelas">⭐</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nino Rota</td>
+                                <td><em>Love Theme from The Godfather</em></td>
+                                <td class="star-rating" data-song="love">
+                                    <span class="star" data-rating="1" aria-label="1 estrela">⭐</span>
+                                    <span class="star" data-rating="2" aria-label="2 estrelas">⭐</span>
+                                    <span class="star" data-rating="3" aria-label="3 estrelas">⭐</span>
+                                    <span class="star" data-rating="4" aria-label="4 estrelas">⭐</span>
+                                    <span class="star" data-rating="5" aria-label="5 estrelas">⭐</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nino Rota</td>
+                                <td><em>The Godfather Waltz</em></td>
+                                <td class="star-rating" data-song="waltz">
+                                    <span class="star" data-rating="1" aria-label="1 estrela">⭐</span>
+                                    <span class="star" data-rating="2" aria-label="2 estrelas">⭐</span>
+                                    <span class="star" data-rating="3" aria-label="3 estrelas">⭐</span>
+                                    <span class="star" data-rating="4" aria-label="4 estrelas">⭐</span>
+                                    <span class="star" data-rating="5" aria-label="5 estrelas">⭐</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nino Rota</td>
+                                <td><em>Sicilian Pastorale</em></td>
+                                <td class="star-rating" data-song="sicilian">
+                                    <span class="star" data-rating="1" aria-label="1 estrela">⭐</span>
+                                    <span class="star" data-rating="2" aria-label="2 estrelas">⭐</span>
+                                    <span class="star" data-rating="3" aria-label="3 estrelas">⭐</span>
+                                    <span class="star" data-rating="4" aria-label="4 estrelas">⭐</span>
+                                    <span class="star" data-rating="5" aria-label="5 estrelas">⭐</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Seção Galeria -->
+            <section id="galeria">
+                <h2><span class="mw-headline" id="Galeria">Galeria</span></h2>
+                <div class="mw-parser-output">
+                    <div class="gallery mw-gallery-traditional" role="img" aria-labelledby="galeria">
+                        <div class="gallerybox" style="width: 155px;">
+                            <div class="thumb" style="width: 150px;">
+                                <div style="margin:0px auto;">
+                                    <img src="https://blogcamposelisios.files.wordpress.com/2014/11/69f21-michael4.jpeg" 
+                                         alt="Michael Corleone na poltrona" 
+                                         width="150" 
+                                         height="auto">
+                                </div>
+                            </div>
+                            <div class="gallerytext">
+                                <p>Michael Corleone em sua poltrona</p>
+                            </div>
+                        </div>
+                        <div class="gallerybox" style="width: 155px;">
+                            <div class="thumb" style="width: 150px;">
+                                <div style="margin:0px auto;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYG--LYhWThACiz2roqbWdKPCT637z6qojw&usqp=CAU" 
+                                         alt="Michael Corleone na capela" 
+                                         width="150" 
+                                         height="auto">
+                                </div>
+                            </div>
+                            <div class="gallerytext">
+                                <p>Michael Corleone na capela</p>
+                            </div>
+                        </div>
+                        <div class="gallerybox" style="width: 155px;">
+                            <div class="thumb" style="width: 150px;">
+                                <div style="margin:0px auto;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILPk0OOy-VTZW-CxjtF0dlUTJXpT_5aoLB5ic8dSbvDx09-NioSY2i50VbyKYR8mDcuM&usqp=CAU" 
+                                         alt="Michael Corleone" 
+                                         width="150" 
+                                         height="auto">
+                                </div>
+                            </div>
+                            <div class="gallerytext">
+                                <p>Retrato de Michael Corleone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="mw-footer" role="contentinfo">
+        <div class="footer-info">
+            <p>Esta página foi editada pela última vez às 20:19 de 14 de junho de 2025.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de avaliação por estrelas
+        document.querySelectorAll('.star-rating').forEach(rating => {
+            const stars = rating.querySelectorAll('.star');
+            let currentRating = 0;
+            
+            stars.forEach((star, index) => {
+                // Hover effect - mostra preview da avaliação
+                star.addEventListener('mouseenter', () => {
+                    highlightStars(stars, index + 1);
+                });
+                
+                // Click - define a avaliação
+                star.addEventListener('click', () => {
+                    currentRating = index + 1;
+                    setRating(stars, currentRating);
+                    
+                    // Salva a avaliação no localStorage
+                    const songId = rating.getAttribute('data-song');
+                    localStorage.setItem(`rating-${songId}`, currentRating);
+                });
+            });
+            
+            // Remove hover effect quando sai da área
+            rating.addEventListener('mouseleave', () => {
+                setRating(stars, currentRating);
+            });
+            
+            // Carrega avaliação salva
+            const songId = rating.getAttribute('data-song');
+            const savedRating = localStorage.getItem(`rating-${songId}`);
+            if (savedRating) {
+                currentRating = parseInt(savedRating);
+                setRating(stars, currentRating);
+            }
+        });
+        
+        function highlightStars(stars, rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.style.opacity = '1';
+                    star.style.transform = 'scale(1.1)';
+                } else {
+                    star.style.opacity = '0.3';
+                    star.style.transform = 'scale(1)';
+                }
+            });
+        }
+        
+        function setRating(stars, rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.style.opacity = '1';
+                    star.style.transform = 'scale(1)';
+                    star.classList.add('selected');
+                } else {
+                    star.style.opacity = '0.3';
+                    star.style.transform = 'scale(1)';
+                    star.classList.remove('selected');
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,135 +1,514 @@
 
+/* Reset e configurações básicas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvetica, Arial, sans-serif;
+    font-size: 20px;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-    padding: 20px;
+    color: #222;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* Cabeçalho principal */
+#mw-head {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    border-bottom: 1px solid #a2a9b1;
+    padding: 0;
 }
 
-h1.intro {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #333;
+.mw-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+    position: relative;
 }
 
-nav {
-    margin-bottom: 20px;
+#firstHeading {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    font-size: 2.3em;
+    font-weight: normal;
+    line-height: 1.3;
+    color: #000;
+    margin: 0;
+    padding: 0.25em 0;
+    border-bottom: 3px solid #a2a9b1;
+    overflow: hidden;
 }
 
-#navegacao {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+.mw-indicators {
+    position: absolute;
+    top: 0.25em;
+    right: 0;
+    font-size: 0.875em;
 }
 
-#navegacao li {
-    margin: 0 10px;
+.mw-indicator {
+    display: inline-block;
 }
 
-#navegacao a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
-    padding: 5px 10px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.geo {
+    font-style: italic;
+    color: #72777d;
 }
 
-#navegacao a:hover {
-    background-color: #333;
-    color: #fff;
+/* Navegação lateral */
+#mw-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 176px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    border-right: 1px solid #a2a9b1;
+    z-index: 2;
+    overflow-y: auto;
 }
 
-.intro-section {
-    text-align: center;
+#mw-panel {
+    padding: 1em 0.75em;
 }
 
-.intro-section .imgintro {
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.intro-section p {
-    font-size: 1.2em;
-    margin: 20px 0;
-    padding: 0 20px;
-}
-
-hr {
+.portal h3 {
+    font-size: 0.75em;
+    color: #4a4a4a;
+    font-weight: normal;
+    margin: 0.5em 0 0 0;
+    padding: 0.25em 0;
+    cursor: default;
     border: 0;
-    height: 1px;
-    background: #333;
-    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
+.portal .body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portal .body li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    line-height: 1.125em;
+}
+
+.portal .body a {
+    color: #0645ad;
+    text-decoration: none;
+    display: block;
+    padding: 0.25em 0;
+}
+
+.portal .body a:hover {
+    color: #0b0080;
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+#content {
+    margin-left: 176px;
+    padding: 1em 1.5em 1.5em 1.5em;
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.mw-body-content {
+    position: relative;
+    line-height: 1.6;
+    font-size: 14px;
+    z-index: 0;
+}
+
+/* Infobox */
+.infobox {
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 0.5em 0 0.5em 1em;
+    padding: 1px;
+    width: 22em;
+    float: right;
+    clear: right;
+    font-size: 88%;
+    line-height: 1.5em;
+}
+
+.infobox-above {
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    padding: 0.25em;
+    background-color: #ddd;
+}
+
+.infobox-image {
+    text-align: center;
+    padding: 0.25em;
+}
+
+.infobox-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.infobox-caption {
+    font-size: 94%;
+    text-align: center;
+    padding: 0.25em;
+}
+
+.infobox-table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.infobox-table th {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.25em 0.5em;
+    background-color: #eee;
+    font-weight: bold;
+    width: 30%;
+}
+
+.infobox-table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.25em 0.5em;
+}
+
+/* Conteúdo do artigo */
+.mw-parser-output {
+    line-height: 1.6;
+}
+
+.mw-parser-output p {
+    margin: 0.5em 0;
+    line-height: inherit;
+}
+
+.mw-parser-output a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+.mw-parser-output a:hover {
+    text-decoration: underline;
+}
+
+.mw-parser-output a:visited {
+    color: #0b0080;
+}
+
+/* Índice */
+#toc {
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    display: table;
+    padding: 7px;
+    font-size: 95%;
+    margin: 1em 0;
+}
+
+.toctitle {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+#mw-toc-heading {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#toc ul {
+    list-style: none;
+    margin: 0.3em 0 0 0;
+    padding: 0;
+}
+
+#toc li {
+    margin: 0;
+    padding: 0;
+}
+
+#toc a {
+    color: #0645ad;
+    text-decoration: none;
+    display: block;
+    padding: 0.125em 0;
+}
+
+#toc a:hover {
+    text-decoration: underline;
+}
+
+.tocnumber {
+    color: #222;
+    margin-right: 0.5em;
+}
+
+/* Seções */
 section {
-    margin-bottom: 20px;
+    margin: 1.5em 0;
+}
+
+.mw-headline {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #000;
 }
 
 section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
-    border-bottom: 2px solid #333;
-    display: inline-block;
-    padding-bottom: 5px;
+    font-size: 1.8em;
+    margin: 1em 0 0.25em 0;
+    padding: 0;
+    border-bottom: 1px solid #a2a9b1;
+    overflow: hidden;
+    font-weight: normal;
 }
 
-section p,
-section ul,
-section table {
-    margin: 10px 0;
-    padding: 0 20px;
+/* Listas */
+.mw-parser-output ul {
+    margin: 0.3em 0 0 1.6em;
+    padding: 0;
 }
 
-ul {
-    list-style: square inside;
-    margin-left: 20px;
+.mw-parser-output li {
+    margin-bottom: 0.1em;
 }
 
-table {
-    width: 100%;
+/* Tabelas */
+.wikitable {
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 1em 0;
+    border: 1px solid #a2a9b1;
     border-collapse: collapse;
-    margin: 20px 0;
+    width: 100%;
 }
 
-table, th, td {
-    border: 1px solid #333;
-    padding: 10px;
+.wikitable caption {
+    font-weight: bold;
+    padding: 0.5em;
+    background-color: #eaecf0;
+    border: 1px solid #a2a9b1;
+    border-bottom: none;
 }
 
-th {
-    background-color: #333;
-    color: #fff;
+.wikitable th,
+.wikitable td {
+    border: 1px solid #a2a9b1;
+    padding: 0.2em 0.4em;
 }
 
-.gallery {
+.wikitable th {
+    background-color: #eaecf0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wikitable td {
+    background-color: #fff;
+}
+
+/* Sistema de estrelas */
+.star-rating {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
 }
 
-.gallery img {
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.star {
+    font-size: 1.1em;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.star:hover {
+    transform: scale(1.1);
+}
+
+.star.selected {
+    opacity: 1;
+}
+
+/* Galeria */
+.gallery {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.mw-gallery-traditional {
+    text-align: center;
+    margin: 2px auto;
+}
+
+.gallerybox {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px;
+    background-color: #f8f9fa;
+    border: solid 2px #c8ccd1;
+}
+
+.thumb {
+    padding: 13px 19px 2px;
+    background-color: #f8f9fa;
+}
+
+.thumb img {
+    border: 1px solid #c8ccd1;
+    background-color: #fff;
+}
+
+.gallerytext {
+    overflow: hidden;
+    font-size: 94%;
+    padding: 2px 6px;
+    word-wrap: break-word;
+}
+
+.gallerytext p {
+    margin: 0;
+}
+
+/* Rodapé */
+#footer {
+    margin-left: 176px;
+    margin-top: 2em;
+    padding: 1.25em;
+    direction: ltr;
+    background-color: #eaecf0;
+    border-top: 1px solid #c8ccd1;
+}
+
+.footer-info {
+    color: #72777d;
+    font-size: 0.875em;
+}
+
+/* Responsividade */
+@media (max-width: 982px) {
+    #mw-navigation {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #a2a9b1;
+    }
+    
+    #mw-panel {
+        padding: 0.5em;
+    }
+    
+    .portal .body ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+    
+    #content {
+        margin-left: 0;
+        padding: 1em;
+    }
+    
+    #footer {
+        margin-left: 0;
+    }
+    
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 1em 0;
+    }
+    
+    #firstHeading {
+        font-size: 1.8em;
+    }
+    
+    .gallerybox {
+        width: auto !important;
+        margin: 0.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+    
+    #firstHeading {
+        font-size: 1.6em;
+    }
+    
+    section h2 {
+        font-size: 1.5em;
+    }
+    
+    .star {
+        font-size: 1em;
+    }
+    
+    .star-rating {
+        gap: 1px;
+    }
+}
+
+/* Estados de hover e foco para acessibilidade */
+a:focus {
+    outline: 2px solid #36c;
+    outline-offset: 2px;
+}
+
+.star:focus {
+    outline: 2px solid #36c;
+    outline-offset: 2px;
+}
+
+/* Melhorias de contraste */
+.mw-parser-output strong {
+    font-weight: bold;
+}
+
+.mw-parser-output em {
+    font-style: italic;
+}
+
+/* Ajustes finais para fidelidade ao Wikipedia */
+.mw-body {
+    border: 1px solid #a2a9b1;
+    border-right-width: 0;
+    margin-top: -1px;
+}
+
+.mw-body-content {
+    position: relative;
+    line-height: 1.6;
+    font-size: 0.875em;
+    z-index: 0;
 }
